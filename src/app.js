@@ -1,23 +1,12 @@
 'use strict';
 
+import 'babel-polyfill';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Hello extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-        <div className="hello-container">
-          <span>{this.props.message}</span>
-        </div>
-    );
-  }
-}
+import App from './components/App';
 
 ReactDOM.render(
-  <Hello message="Holy smokes React is awesome. One more time with feeling!"></Hello>,
+  <App></App>,
   document.getElementById('app')
 );

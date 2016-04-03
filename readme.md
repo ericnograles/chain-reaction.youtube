@@ -1,12 +1,12 @@
 # Chain Reaction
 
-## Episode 1: A Basic React Build System Using Webpack and Babel
+## Episode 2: Beginning React Coding and Unit Testing
 
 ### Summary
 
 Welcome to Chain Reaction!  In this weekly series hosted by Eric Nograles, we will utilize tools and techniques in the React ecosystem for newcomers to get acclimated to the platform.  Additionally, I aim to assist more experienced developers with some techniques of which they may not be aware.
 
-Episode 1 covers the basics of an auto-reloading build system for React utilizing Webpack and Babel.  We will be coding in ES2015 and using Webpack to manage our builds for our basic React application.
+Episode 2 covers the basics of React coding and unit testing.  We will examine what comprises a React component, how to go about coding a React component, and communicate with a backend API using [fetch](https://github.com/github/fetch) (via the [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) library)
 
 ### Installation
 
@@ -18,6 +18,4 @@ Episode 1 covers the basics of an auto-reloading build system for React utilizin
 
 ### Running the Application
 
-1. Run `webpack`
-2. Run `webpack-dev-server --content-base dist/`
-3. Open a browser and go to `http://localhost:8080`
+1. Run `npm start`
