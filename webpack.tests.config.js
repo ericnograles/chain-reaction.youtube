@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
-var hostname = 'localhost';
-var port = 8082;
+var host = 'localhost';
+var port = 3002;
 
 module.exports = {
   context: __dirname + '/tests',
@@ -36,11 +36,11 @@ module.exports = {
   },
 
   plugins: [
-    new OpenBrowserPlugin({ url: 'http://' + hostname + ':' + port })
+    new OpenBrowserPlugin({ url: 'http://' + host + ':' + port })
   ],
 
   devServer: {
-    host: hostname,
+    host: host,
     port: port
   },
 

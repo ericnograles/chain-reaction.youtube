@@ -1,5 +1,7 @@
 var webpack = require('webpack');
-var path = require('path');
+var host = 'localhost';
+var port = 3001;
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
   context: __dirname + '/src',
@@ -36,9 +38,19 @@ module.exports = {
       },
     ],
   },
+
+  plugins: [
+    new OpenBrowserPlugin({ url: 'http://' + host + ':' + port })
+  ],
+
   output: {
     filename: 'app.js',
     path: __dirname + '/dist',
+  },
+
+  devServer: {
+    host: host,
+    port: port
   },
 
   devtool: 'source-map',
