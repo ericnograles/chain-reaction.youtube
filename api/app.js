@@ -9,7 +9,11 @@ app.use(bodyParser.json());
 app.use('/memes', function memeController(req, res, next) {
   var payload = {
     data: [
-      'http://www.multipelife.com/wp-content/uploads/2015/06/create-http-server-with-nodejs.png'
+      'http://cdn.meme.am/instances/500x/13734123.jpg',
+      'http://s2.quickmeme.com/img/6d/6d68ad25beab779467cf2e95c7c3de742f4df17ad4e38176a71886f566816424.jpg',
+      'http://cdn.pophangover.com/wp-content/uploads/2013/12/mem2.png',
+      'http://memesvault.com/wp-content/uploads/Best-Meme-03.jpg',
+      'http://memesvault.com/wp-content/uploads/I-Have-No-Idea-What-Im-Doing-Dog-02.jpg'
     ]
   };
 
