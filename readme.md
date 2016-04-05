@@ -1,6 +1,6 @@
 # Chain Reaction
 
-## Episode 2: Beginning React Coding and Unit Testing
+## Episode 2: Structuring a React Application
 
 ### Summary
 
