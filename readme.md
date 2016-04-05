@@ -6,7 +6,7 @@
 
 Welcome to Chain Reaction!  In this weekly series hosted by Eric Nograles, we will utilize tools and techniques in the React ecosystem for newcomers to get acclimated to the platform.  Additionally, I aim to assist more experienced developers with some techniques of which they may not be aware.
 
-Episode 2 covers the basics of React coding and unit testing.  We will examine what comprises a React component, how to go about coding a React component, and communicate with a backend API using [fetch](https://github.com/github/fetch) (via the [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) library)
+Episode 2 covers the basics of structuring a more realistic React application.  We will examine what comprises a React component, how to go about coding a React component, and communicate with a backend API using [fetch](https://github.com/github/fetch) (via the [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) library)
 
 ### Installation
 
