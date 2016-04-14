@@ -1,6 +1,6 @@
 import * as React from 'react';
 import expect from 'expect';
-import {Simulate, renderIntoDocument} from 'react-addons-test-utils';
+import {renderIntoDocument} from 'react-addons-test-utils';
 import App from './';
 
 describe('/components/App', () => {
