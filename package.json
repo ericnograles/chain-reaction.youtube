@@ -4,7 +4,7 @@
   "description": "This is our first React app",
   "main": "./src/app.js",
   "scripts": {
-    "test": "npm test",
+    "test": "mocha --compilers js:babel-core/register --require ./tests/setup.js ./src/**/*.test.js",
     "start": "trap 'kill %1; kill %2' SIGINT && webpack-dev-server --config webpack.config.js --content-base dist/ --inline & webpack-dev-server --config webpack.tests.config.js  --content-base unit-tests/ --inline & node ./api/app.js"
   },
   "author": "Eric Nograles",
