@@ -1,12 +1,12 @@
 # Chain Reaction
 
-## Episode 2: Beginning React Coding and Unit Testing
+## Episode 3: Unit Testing Using Mocha, React, and Webpack
 
 ### Summary
 
 Welcome to Chain Reaction!  In this weekly series hosted by Eric Nograles, we will utilize tools and techniques in the React ecosystem for newcomers to get acclimated to the platform.  Additionally, I aim to assist more experienced developers with some techniques of which they may not be aware.
 
-Episode 2 covers the basics of React coding and unit testing.  We will examine what comprises a React component, how to go about coding a React component, and communicate with a backend API using [fetch](https://github.com/github/fetch) (via the [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) library)
+Episode 3 covers the basics of Mocha unit tests in the context of a React application. This exercise covers unit testing in a headless fashion using NPM as well as firing up a live-reloading version of Mocha that sits alongside of your web application via Webpack.
 
 ### Installation
 
