@@ -7,29 +7,24 @@ import { findMemes } from '../../services/api';
 export default class MemeGrid extends Component {
   constructor(props) {
     super(props);
-    
+
     this.refreshMemes = this.refreshMemes.bind(this);
     this.state = {
       memes: []
     };
   }
-  
+
   refreshMemes() {
     var self = this;
-    return new Promise(
-      (resolve, reject) => {
-        findMemes()
-          .then(payload => {
-            self.setState({
-              memes: payload.data
-            });
-            resolve();
-          })
-          .catch(error => {
-            reject(error);
-          });  
-      }
-    );
+    findMemes()
+      .then(payload => {
+        self.setState({
+          memes: payload.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   componentDidMount() {
