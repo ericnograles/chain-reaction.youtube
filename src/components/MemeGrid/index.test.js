@@ -23,7 +23,7 @@ describe('/components/MemeGrid', () => {
     item.refreshMemes()
       .then(function() {
         expect(item.state.memes.length > 0).toBe(true, 'Memes should have been rendered');
-        expect(fetchMock.called('http://localhost:3000/memes'));
+        expect(fetchMock.called('http://localhost:3000/memes')).toBe(true);
         done();
       })
       .catch(function(err) {
