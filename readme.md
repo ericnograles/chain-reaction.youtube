@@ -4,6 +4,8 @@
 
 ### Summary
 
+[View Episode](https://www.youtube.com/watch?v=fktlg09SYTU)
+
 Welcome to Chain Reaction!  In this weekly series hosted by Eric Nograles, we will utilize tools and techniques in the React ecosystem for newcomers to get acclimated to the platform.  Additionally, I aim to assist more experienced developers with some techniques of which they may not be aware.
 
 Episode 1 covers the basics of an auto-reloading build system for React utilizing Webpack and Babel.  We will be coding in ES2015 and using Webpack to manage our builds for our basic React application.
