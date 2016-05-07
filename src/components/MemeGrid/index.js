@@ -1,42 +1,26 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { MemeGridTemplate } from './template';
-import { findMemes } from '../../services/api';
 
 export default class MemeGrid extends Component {
-  constructor(props) {
-    super(props);
-    
-    this.refreshMemes = this.refreshMemes.bind(this);
-    this.state = {
-      memes: []
-    };
-  }
-  
-  refreshMemes() {
-    var self = this;
-    return new Promise(
-      (resolve, reject) => {
-        findMemes()
-          .then(payload => {
-            self.setState({
-              memes: payload.data
-            });
-            resolve();
-          })
-          .catch(error => {
-            reject(error);
-          });  
-      }
-    );
-  }
-
-  componentDidMount() {
-    this.refreshMemes();
-  }
-
   render() {
-    return MemeGridTemplate(this);
+    var memes = this.props.memes.map(memeUrl => {
+      return (
+        <div key={memeUrl} className="demo-container mdl-grid">
+          <div className="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div className="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div className="meme-image-container">
+              <img src={memeUrl} />
+            </div>
+          </div>
+        </div>
+      );
+    });
+
+    return (
+      <main className="demo-main mdl-layout__content">
+        {memes}
+      </main>
+    );
   }
 }

@@ -3,31 +3,16 @@ import expect from 'expect';
 import {renderIntoDocument} from 'react-addons-test-utils';
 import MemeGrid from './';
 
-var fetchMock = require('fetch-mock');
-
-// Mock the fetch
-fetchMock
-  .mock('http://localhost:3000/memes', 'GET', {
-    data: [
-      'http://www.multipelife.com/wp-content/uploads/2015/06/create-http-server-with-nodejs.png'
-    ]
-  });
-
 describe('/components/MemeGrid', () => {
   it('should render with memes', (done) => {
+    var memes = [
+      'http://www.multipelife.com/wp-content/uploads/2015/06/create-http-server-with-nodejs.png'
+    ];
     const item = renderIntoDocument(
-      <MemeGrid />
+      <MemeGrid memes={memes} />
     );
 
     expect(item).toExist();
-    item.refreshMemes()
-      .then(function() {
-        expect(item.state.memes.length > 0).toBe(true, 'Memes should have been rendered');
-        expect(fetchMock.called('http://localhost:3000/memes')).toBe(true);
-        done();
-      })
-      .catch(function(err) {
-        done(err);
-      });
+    expect(item.props.memes.length > 0).toBe(true, 'Memes should have been rendered');
   });
 });
